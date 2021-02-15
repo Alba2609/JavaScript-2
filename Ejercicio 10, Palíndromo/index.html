@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Palindromo</title>
+<script type="text/javascript" >
+function palindromo(cadena) {
+
+var resultado = "La cadena \""+cadena+"\" \n";
+
+
+var cadenaOriginal = cadena.toLowerCase();
+
+
+var letrasEspacios = cadenaOriginal.split("");
+
+
+var cadenaSinEspacios = "";
+for(i in letrasEspacios) {
+  if(letrasEspacios[i] != " ") {
+    cadenaSinEspacios += letrasEspacios[i];
+  }
+};
+
+var letras = cadenaSinEspacios.split("");
+var letrasReves = cadenaSinEspacios.split("").reverse();
+
+
+var iguales = true;
+for(i in letras) {
+  if(letras[i] == letrasReves[i]) {
+    
+  }
+  else {
+    
+    iguales = false;
+  }
+};
+
+if(iguales) {
+  resultado += " es un palíndromo";
+}
+else {
+  resultado += " no es un palíndromo";
+};
+
+return resultado;
+};
+
+alert(palindromo("La ruta nos aporto otro paso natural"));
+alert(palindromo("Esta frase no se parece a ningun palindromo"));
+</script>
+
+</head>
+ 
+<body>
+<h1>Palindromo</h1>
+
+
+
+<noscript>
+    <p>Bienvenido a Mi Sitio</p>
+    <p>La página que estás viendo requiere para su funcionamiento el uso de JavaScript.
+  Si lo has deshabilitado intencionadamente, por favor vuelve a activarlo.</p>
+  </noscript>
+</body>
+</html>
